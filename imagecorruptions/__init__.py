@@ -45,8 +45,8 @@ def corrupt(image, severity=1, corruption_name=None, corruption_number=-1):
 
     height, width, channels = image.shape
 
-    if (height < 32 or width < 32):
-        raise AttributeError('Image width and height must be at least 32 pixels')
+    if (height < 16 or width < 16):
+        raise AttributeError('Image width and height must be at least 16 pixels')
 
     if not (channels in [1, 3]):
         raise AttributeError('Expecting image to have either 1 or 3 channels (last dimension)')
